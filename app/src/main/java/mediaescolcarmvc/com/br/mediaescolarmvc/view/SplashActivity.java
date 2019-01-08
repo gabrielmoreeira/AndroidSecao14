@@ -4,11 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import mediaescolcarmvc.com.br.mediaescolarmvc.R;
-import mediaescolcarmvc.com.br.mediaescolarmvc.controller.MediaEscolarController;
-import mediaescolcarmvc.com.br.mediaescolarmvc.model.MediaEscolar;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -33,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
                 //DataSource ds = new DataSource(getApplicationContext());
 
                 //TODO remover este código daqui
-                MediaEscolar obj = new MediaEscolar();
+                //MediaEscolar obj = new MediaEscolar();
 
                 /*obj.setMateria("Portugues");
                 obj.setBimestre("1° Bimestre");
@@ -52,12 +49,12 @@ public class SplashActivity extends AppCompatActivity {
                 mediaEscolarController.alterar(obj);*/
 
 
-                MediaEscolarController mediaEscolarController = new MediaEscolarController(getBaseContext());
+               // MediaEscolarController mediaEscolarController = new MediaEscolarController(getBaseContext());
                 //List<MediaEscolar> objetos = mediaEscolarController.listar();
 
-                obj.setId(2);
-                mediaEscolarController.buscar(obj);
-                Log.i("BUSCAR DADOS: ", "ID: " + obj.getId());
+                //obj.setId(2);
+               // mediaEscolarController.buscar(obj);
+               // Log.i("BUSCAR DADOS: ", "ID: " + obj.getId());
 
                 //for (MediaEscolar obj: objetos) {
                 //    Log.i("CRUD LISTAR ","ID: " + obj.getId() + " - Matéria: " + obj.getMateria());
