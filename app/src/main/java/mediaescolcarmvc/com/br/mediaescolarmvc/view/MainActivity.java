@@ -113,24 +113,33 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_bimestre_a) {
 
+            setTitle("Notas 1º Bimestre");
+
             fragmentManager.beginTransaction().replace(R.id.content_fragment,new BimestreAFragment()).commit();
 
         } else if (id == R.id.nav_bimestre_b) {
+
+            setTitle("Notas 2º Bimestre");
 
             fragmentManager.beginTransaction().replace(R.id.content_fragment,new BimestreBFragment()).commit();
 
         } else if (id == R.id.nav_bimestre_c) {
 
+            setTitle("Notas 3º Bimestre");
+
             fragmentManager.beginTransaction().replace(R.id.content_fragment,new BimestreCFragment()).commit();
 
         } else if (id == R.id.nav_bimestre_d){
 
+            setTitle("Notas 4º Bimestre");
+
             fragmentManager.beginTransaction().replace(R.id.content_fragment,new BimestreDFragment()).commit();
 
         } else if (id == R.id.nav_resultado_final){
+            setTitle("Resultado Final");
 
             fragmentManager.beginTransaction().replace(R.id.content_fragment,new ResultadoFinalFragment()).commit();
-            
+
         } else if (id == R.id.nav_share) {
 
         }
