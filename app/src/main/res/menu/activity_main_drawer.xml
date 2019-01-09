@@ -4,14 +4,18 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_bimestre_a"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Notas 1º Bimestre" />
+
+         <item
+            android:id="@+id/nav_resultado_final"
             android:icon="@drawable/ic_menu_camera"
             android:title="Resultado Final" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Lançamento de notas" />
+
+
 
     </group>
 
