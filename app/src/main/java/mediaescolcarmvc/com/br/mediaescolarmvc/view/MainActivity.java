@@ -15,7 +15,11 @@ import android.view.MenuItem;
 import android.view.View;
 
 import mediaescolcarmvc.com.br.mediaescolarmvc.R;
-import mediaescolcarmvc.com.br.mediaescolarmvc.fragmets.ModeloFragment;
+import mediaescolcarmvc.com.br.mediaescolarmvc.fragmets.BimestreAFragment;
+import mediaescolcarmvc.com.br.mediaescolarmvc.fragmets.BimestreBFragment;
+import mediaescolcarmvc.com.br.mediaescolarmvc.fragmets.BimestreCFragment;
+import mediaescolcarmvc.com.br.mediaescolarmvc.fragmets.BimestreDFragment;
+import mediaescolcarmvc.com.br.mediaescolarmvc.fragmets.ResultadoFinalFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -61,7 +65,7 @@ public class MainActivity extends AppCompatActivity
 
         fragmentManager = getSupportFragmentManager();
 
-        fragmentManager.beginTransaction().replace(R.id.content_fragment,new ModeloFragment()).commit();
+        //fragmentManager.beginTransaction().replace(R.id.content_fragment,new ModeloFragment()).commit();
 
 
 
@@ -107,10 +111,26 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_resultado_final) {
-            // Handle the camera action
-        } else if (id == R.id.nav_bimestre_a) {
+        if (id == R.id.nav_bimestre_a) {
 
+            fragmentManager.beginTransaction().replace(R.id.content_fragment,new BimestreAFragment()).commit();
+
+        } else if (id == R.id.nav_bimestre_b) {
+
+            fragmentManager.beginTransaction().replace(R.id.content_fragment,new BimestreBFragment()).commit();
+
+        } else if (id == R.id.nav_bimestre_c) {
+
+            fragmentManager.beginTransaction().replace(R.id.content_fragment,new BimestreCFragment()).commit();
+
+        } else if (id == R.id.nav_bimestre_d){
+
+            fragmentManager.beginTransaction().replace(R.id.content_fragment,new BimestreDFragment()).commit();
+
+        } else if (id == R.id.nav_resultado_final){
+
+            fragmentManager.beginTransaction().replace(R.id.content_fragment,new ResultadoFinalFragment()).commit();
+            
         } else if (id == R.id.nav_share) {
 
         }
