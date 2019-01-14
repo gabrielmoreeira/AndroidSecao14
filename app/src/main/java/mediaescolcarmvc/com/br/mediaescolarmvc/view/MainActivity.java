@@ -14,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.text.DecimalFormat;
+
 import mediaescolcarmvc.com.br.mediaescolarmvc.R;
 import mediaescolcarmvc.com.br.mediaescolarmvc.fragmets.BimestreAFragment;
 import mediaescolcarmvc.com.br.mediaescolarmvc.fragmets.BimestreBFragment;
@@ -149,4 +151,12 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public static String formatarValorDecimal(Double valor)
+    {
+        DecimalFormat df = new DecimalFormat("#,###,##0.00");
+        return df.format(valor);
+    }
+
+
 }
