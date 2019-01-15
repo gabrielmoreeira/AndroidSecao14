@@ -38,7 +38,7 @@ public class MediaEscolarController extends DataSource {
         dados.put(MediaEscolarDataModel.getBimestre(), obj.getBimestre());
         dados.put(MediaEscolarDataModel.getSituacao(), obj.getSituacao());
         dados.put(MediaEscolarDataModel.getNotaProva(), obj.getNotaProva());
-        dados.put(MediaEscolarDataModel.getNotaMateria(), obj.getNotaMateria());
+        dados.put(MediaEscolarDataModel.getNotaMateria(), obj.getNotaTrabalho());
         dados.put(MediaEscolarDataModel.getMediaFinal(), obj.getMediaFinal());
 
         sucesso = insert(MediaEscolarDataModel.getTABELA(),dados);
@@ -67,7 +67,7 @@ public class MediaEscolarController extends DataSource {
         dados.put(MediaEscolarDataModel.getBimestre(), obj.getBimestre());
         dados.put(MediaEscolarDataModel.getSituacao(), obj.getSituacao());
         dados.put(MediaEscolarDataModel.getNotaProva(), obj.getNotaProva());
-        dados.put(MediaEscolarDataModel.getNotaMateria(), obj.getNotaMateria());
+        dados.put(MediaEscolarDataModel.getNotaMateria(), obj.getNotaTrabalho());
         dados.put(MediaEscolarDataModel.getMediaFinal(), obj.getMediaFinal());
 
         sucesso = alterar(MediaEscolarDataModel.getTABELA(),dados);

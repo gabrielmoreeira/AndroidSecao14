@@ -12,9 +12,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import mediaescolcarmvc.com.br.mediaescolarmvc.R;
+import mediaescolcarmvc.com.br.mediaescolarmvc.model.MediaEscolar;
 import mediaescolcarmvc.com.br.mediaescolarmvc.view.MainActivity;
 
 public class BimestreBFragment extends Fragment {
+
+    MediaEscolar mediaEscolar;
 
     Button btnCalcular;
     EditText editMateria;
@@ -111,6 +114,20 @@ public class BimestreBFragment extends Fragment {
 
                     // Após Validação
                     if (dadosValidados) {
+
+                        /**
+                         * Cria o objeto Media Escolar
+                         */
+                        mediaEscolar = new MediaEscolar();
+
+                        /**
+                         * Abaixo, setamos os valores que vieram dos edits e populamos o objeto
+                         */
+                        mediaEscolar.setMateria(editMateria.getText().toString());
+                        mediaEscolar.setNotaProva(Double.parseDouble(editNotaProva.getText().toString()));
+                        mediaEscolar.setNotaTrabalho(Double.parseDouble(editNotaTrabalho.getText().toString()));
+
+
                         media = (notaProva + notaTrabalho) / 2;
 
                         txtResultado.setText(MainActivity.formatarValorDecimal(media));
