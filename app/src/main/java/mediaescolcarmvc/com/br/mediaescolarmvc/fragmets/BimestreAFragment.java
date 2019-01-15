@@ -56,6 +56,9 @@ public class BimestreAFragment extends Fragment {
         editNotaTrabalho = view.findViewById(R.id.editNotaTrabalho);
         btnCalcular      = view.findViewById(R.id.btnCalcular);
 
+        txtResultado     = view.findViewById(R.id.txtResultado);
+        txtSituacaoFinal = view.findViewById(R.id.txtSituacaoFinal);
+
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
