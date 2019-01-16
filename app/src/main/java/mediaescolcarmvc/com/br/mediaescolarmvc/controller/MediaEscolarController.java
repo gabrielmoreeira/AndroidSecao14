@@ -18,13 +18,13 @@ public class MediaEscolarController extends DataSource {
     }
 
     // TODO: implementar calculo da média
-    public void calcularMedia(){
-
+    public double calcularMedia(MediaEscolar obj){
+        return (obj.getNotaProva() + obj.getNotaTrabalho()) / 2;
     }
 
     // TODO: Implementar calculo do resultado final
-    public void resultadoFinal(){
-
+    public String resultadoFinal(double media){
+        return media >= 7? "Aprovado" : "Reprovado" ;
     }
 
     public boolean salvar(MediaEscolar obj){
