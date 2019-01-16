@@ -122,6 +122,7 @@ public class BimestreBFragment extends Fragment {
                          * Cria o objeto Media Escolar
                          */
                         mediaEscolar = new MediaEscolar();
+
                         controller = new MediaEscolarController(context);
 
                         /**
@@ -130,17 +131,31 @@ public class BimestreBFragment extends Fragment {
                         mediaEscolar.setMateria(editMateria.getText().toString());
                         mediaEscolar.setNotaProva(Double.parseDouble(editNotaProva.getText().toString()));
                         mediaEscolar.setNotaTrabalho(Double.parseDouble(editNotaTrabalho.getText().toString()));
+                        mediaEscolar.setBimestre("2º Bimestre");
 
                         media = controller.calcularMedia(mediaEscolar);
 
+                        mediaEscolar.setMediaFinal(media);
+
+                        mediaEscolar.setSituacao(controller.resultadoFinal(media));
+
                         txtResultado.setText(MainActivity.formatarValorDecimal(media));
 
-                        txtSituacaoFinal.setText(controller.resultadoFinal(media));
+                        txtSituacaoFinal.setText(mediaEscolar.getSituacao());
+
 
                         editNotaProva.setText(MainActivity.formatarValorDecimal(notaProva));
                         editNotaTrabalho.setText(MainActivity.formatarValorDecimal(notaTrabalho));
 
                         //salvarSharedPreferences();
+
+                        if ( controller.salvar(mediaEscolar)){
+                            // obj saldo com sucesso no bd
+                            Toast.makeText(context,"Dados salvos com sucesso...",Toast.LENGTH_LONG).show();
+                        } else {
+                            // falha ao salvar o objeto no banco de dados
+                            Toast.makeText(context,"Falha ao salvar os dados...",Toast.LENGTH_LONG).show();
+                        };
 
                     }
 
