@@ -14,4 +14,7 @@
     <string name="modelo_fragment_c">3º BiImestre</string>
     <string name="modelo_fragment_d">4º BiImestre</string>
     <string name="modelo_resultado_final">Resultado Final</string>
+
+    <string name="txtLogo">Logo Média Escolar</string>
+    <string name="txtResultado">1º Bim - Matemática - Aprovado</string>
 </resources>
